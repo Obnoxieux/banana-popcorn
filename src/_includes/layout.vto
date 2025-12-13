@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="/css/app.css" />
     <title>{{ title }}</title>
   </head>
   <body>
+    <header>
+      {{ await comp.headerNav() }}
+    </header>
     <main>
     {{ content }}
     </main>
+    {{ await comp.footer() }}
   </body>
 </html>
