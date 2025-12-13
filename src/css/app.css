@@ -11,6 +11,7 @@
 @import "base/buttons.css";
 @import "base/disclosures.css";
 @import "base/forms.css";
+@import "base/layout.css";
 @import "base/lists.css";
 @import "base/media.css";
 @import "base/modal.css";
@@ -19,7 +20,8 @@
 
 /* Components */
 /* Import components from the component folder here in ABC order */
-/* For example: @import "components/_card.css" */
+@import "components/nav.css";
+@import "components/footer.css";
 
 /* Utilities */
 @import "utilities/hide-visually.css";

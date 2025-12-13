@@ -1,0 +1,7 @@
+.footer-nav {
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space--small);
+  }
+}

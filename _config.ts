@@ -15,6 +15,7 @@ const site = lume({
 });
 
 site.add("css");
+site.add([".svg"]);
 
 site.use(nav());
 site.use(robots());

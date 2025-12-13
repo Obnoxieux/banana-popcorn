@@ -2,16 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/app.css" />
     <title>{{ title }}</title>
   </head>
   <body>
-    <header>
+    <header class="main-nav-header">
       {{ await comp.headerNav() }}
     </header>
+
+    <hr>
+
     <main>
-    {{ content }}
+      <div class="container">
+      {{ content }}
+      </div>
     </main>
+
+    <hr>
+
     {{ await comp.footer() }}
   </body>
 </html>

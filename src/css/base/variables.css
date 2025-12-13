@@ -24,6 +24,7 @@
   --color--red-900: #a61f23;
 
   --color--primary-base: var(--color--orange-500);
+  --color--on-primary-base: var(--color--black-500);
   --color--primary-dark: var(--color--orange-900);
   --color--primary-light: var(--color--orange-100);
 
@@ -87,7 +88,14 @@
   --border--dark: var(--border-width--base) solid var(--color--primary-base);
 
   --container--base: 50rem;
-  --container--large: 85rem;
+  --container--large: 65rem;
+
+  --breakpoint--x-small: 32rem;
+  --breakpoint--small: 40rem;
+  --breakpoint--medium: 48rem;
+  --breakpoint--large: 64rem;
+  --breakpoint--x-large: 80rem;
+  --breakpoint--xx-large: 96rem;
 
   --space--xx-small: 0.25rem;
   --space--x-small: 0.5rem;

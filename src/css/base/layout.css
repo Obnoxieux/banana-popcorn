@@ -1,0 +1,29 @@
+main, footer, .main-nav-header {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    flex-grow: 1;
+    max-width: 93%;
+
+    @media (min-width: 40rem) {
+      max-width: 90%;
+    }
+
+    @media (min-width: 48rem) {
+      max-width: 88%;
+    }
+
+    @media (min-width: 64rem) {
+      max-width: 85%;
+    }
+
+    @media (min-width: 80rem) {
+      max-width: 80%;
+    }
+
+    @media (min-width: 96rem) {
+      max-width: var(--container--large);
+    }
+  }
+}

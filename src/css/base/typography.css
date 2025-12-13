@@ -22,12 +22,12 @@ body {
   font-weight: var(--font-weight--bold);
 }
 
-h1 {
+h1, .h1 {
   text-wrap: balance;
   text-wrap: pretty;
 }
 
-a {
+.anchor {
   color: var(--color--link);
   transition: var(--transition-duration--base) color var(--transition-timing--base);
 

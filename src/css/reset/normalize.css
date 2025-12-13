@@ -359,3 +359,8 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+.reset-link {
+  color: inherit;
+  text-decoration: inherit;
+}

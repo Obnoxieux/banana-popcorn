@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="Ebene-1" serif:id="Ebene 1" transform="matrix(1,0,0,1,6.46995,4.30025)">
-        <rect id="rect1" x="-9.921" y="-7.219" width="518.135" height="518.614" style="fill:rgb(255,147,0);"/>
+    <g transform="matrix(1,0,0,1,6.46995,4.30025)">
         <g transform="matrix(3.65922,0,0,3.65922,-179.47,-209.12)">
             <g transform="matrix(1,0,0,1,53.5487,61.9207)">
                 <path d="M20.71,44.56L14.19,38.63C14.19,38.63 13.92,35.68 16.23,34.74C18.86,33.67 21.39,34.93 21.39,34.93L25.38,42.61L20.71,44.56Z" style="fill:rgb(180,14,28);fill-rule:nonzero;"/>
