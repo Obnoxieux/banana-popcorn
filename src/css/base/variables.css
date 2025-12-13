@@ -8,8 +8,8 @@
 
   --color--gray-50: #f3f6fa;
   --color--gray-100: #d9e3ee;
-  --color--gray-500: #8fa5be;
-  --color--gray-900: #354457;
+  --color--gray-500: oklch(65% 2% 286deg);
+  --color--gray-900: oklch(0% 0% 0deg / 5%);
 
   --color--green-100: #dcecdc;
   --color--green-500: #b8d5b8;
@@ -32,7 +32,7 @@
   --color--accent-dark: var(--color--purple-900);
   --color--accent-light: var(--color--purple-100);
 
-  --color-body-background: light-dark(white, #1c1b22);
+  --color-body-background: light-dark(white, oklch(0% 0% 0deg / 10%));
 
   --color--background-base: var(--color--white-500);
   --color--background-light: var(--color--gray-100);

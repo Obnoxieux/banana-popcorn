@@ -8,6 +8,7 @@ import favicon from "lume/plugins/favicon.ts";
 import metas from "lume/plugins/metas.ts";
 import brotli from "lume/plugins/brotli.ts";
 import gzip from "lume/plugins/gzip.ts";
+import inline from "lume/plugins/inline.ts";
 
 const site = lume({
   src: "./src",
@@ -26,5 +27,6 @@ site.use(favicon());
 site.use(metas());
 site.use(brotli());
 site.use(gzip());
+site.use(inline());
 
 export default site;
