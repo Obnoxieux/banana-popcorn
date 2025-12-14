@@ -20,8 +20,10 @@
 
 /* Components */
 /* Import components from the component folder here in ABC order */
+@import "components/centeredImageContainer.css";
 @import "components/nav.css";
 @import "components/footer.css";
+@import "components/popcorn-page.css";
 
 /* Utilities */
 @import "utilities/hide-visually.css";

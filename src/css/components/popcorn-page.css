@@ -1,0 +1,5 @@
+.popcorn-page {
+  .popcorn-header-section {
+    --svg-color: var(--color--accent-base);
+  }
+}

@@ -1,0 +1,8 @@
+.centered-image-container {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    color: var(--svg-color);
+  }
+}

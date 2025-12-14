@@ -1,7 +1,11 @@
-.footer-nav {
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: var(--space--small);
+.main-footer {
+  padding-top: var(--space--large);
+
+  .footer-nav {
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--space--small);
+    }
   }
 }
