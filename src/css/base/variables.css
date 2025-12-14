@@ -6,8 +6,8 @@
   --color--orange-500: oklch(76% 44% 62deg);
   --color--orange-900: oklch(0.5178 0.17600000000000002 62);
 
-  --color--gray-50: #f3f6fa;
-  --color--gray-100: #d9e3ee;
+  --color--gray-50: oklch(0% 0% 0deg / 1%);
+  --color--gray-100: oklch(0% 0% 0deg / 8%);
   --color--gray-500: oklch(65% 2% 286deg);
   --color--gray-900: oklch(0% 0% 0deg / 5%);
 
@@ -15,9 +15,9 @@
   --color--green-500: #b8d5b8;
   --color--green-900: #8aa48a;
 
-  --color--purple-100: #f0dff6;
-  --color--purple-500: #d7c4de;
-  --color--purple-900: #ae8fba;
+  --color--pink-100: oklch(65% 60% 18deg / 10%);
+  --color--pink-500: light-dark(oklch(65% 60% 18deg), oklch(66% 58% 16deg));
+  --color--pink-900: oklch(65% 60% 18deg / 90%);
 
   --color--red-100: #ffbec0;
   --color--red-500: #e5383e;
@@ -28,9 +28,9 @@
   --color--primary-dark: var(--color--orange-900);
   --color--primary-light: var(--color--orange-100);
 
-  --color--accent-base: var(--color--purple-500);
-  --color--accent-dark: var(--color--purple-900);
-  --color--accent-light: var(--color--purple-100);
+  --color--accent-base: var(--color--pink-500);
+  --color--accent-dark: var(--color--pink-900);
+  --color--accent-light: var(--color--pink-100);
 
   --color-body-background: light-dark(white, oklch(0% 0% 0deg / 10%));
 
