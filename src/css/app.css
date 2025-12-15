@@ -1,29 +1,33 @@
+@layer base;
+@layer components;
+@layer utilities;
+
 /* Reset */
-@import "reset/normalize.css";
+@import "reset/normalize.css" layer(base);
 
 /* Dependencies */
-@import "base/variables.css";
-@import "base/root.css";
-@import "base/fonts.css";
+@import "base/variables.css" layer(base);
+@import "base/root.css" layer(base);
+@import "base/fonts.css" layer(base);
 
 /* Base */
-@import "base/animation.css";
-@import "base/buttons.css";
-@import "base/disclosures.css";
-@import "base/forms.css";
-@import "base/layout.css";
-@import "base/lists.css";
-@import "base/media.css";
-@import "base/modal.css";
-@import "base/tables.css";
-@import "base/typography.css";
+@import "base/animation.css" layer(base);
+@import "base/buttons.css" layer(base);
+@import "base/disclosures.css" layer(base);
+@import "base/forms.css" layer(base);
+@import "base/layout.css" layer(base);
+@import "base/lists.css" layer(base);
+@import "base/media.css" layer(base);
+@import "base/modal.css" layer(base);
+@import "base/tables.css" layer(base);
+@import "base/typography.css" layer(base);
 
 /* Components */
 /* Import components from the component folder here in ABC order */
-@import "components/centeredImageContainer.css";
-@import "components/nav.css";
-@import "components/footer.css";
-@import "components/popcorn-page.css";
+@import "components/centeredImageContainer.css" layer(components);
+@import "components/nav.css" layer(components);
+@import "components/footer.css" layer(components);
+@import "components/popcorn-page.css" layer(components);
 
 /* Utilities */
-@import "utilities/hide-visually.css";
+@import "utilities/hide-visually.css" layer(utilities);
