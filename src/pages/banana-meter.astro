@@ -4,5 +4,48 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Banana Meter">
   <h1>Banana Meter</h1>
-  <p>Coming soon.</p>
+  <section>
+    <header>
+      <h2>
+        Count:
+        <span class="banana-count"></span>
+      </h2>
+    </header>
+
+    <ul class="banana-grid">
+
+    </ul>
+  </section>
 </Layout>
+
+<script>
+  import {difference} from "../lib/loader/bananaCount.ts";
+  import {range} from "../lib/utility/range.ts";
+
+  console.log(`Calculated difference of ${difference} months`);
+
+  document.querySelector('.banana-count')?.append(String(difference));
+
+  const amount = range(1, difference);
+
+  const section = document.querySelector('.banana-grid');
+  const fragment = new DocumentFragment();
+  if (section) {
+    for (const _ of amount) {
+      const li = document.createElement("li");
+      li.innerText = "🍌";
+      li.classList.add("banana-grid-item");
+      fragment.appendChild(li);
+    }
+    section.append(fragment);
+  }
+</script>
+
+<style>
+  .banana-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--space--medium) 5px;
+    font-size: var(--font-size--subheader);
+  }
+</style>
