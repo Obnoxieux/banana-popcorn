@@ -2,4 +2,8 @@
   .popcorn-header-section {
     --svg-color: var(--color--accent-base);
   }
+
+  details {
+    margin-block-end: var(--space--base);
+  }
 }
