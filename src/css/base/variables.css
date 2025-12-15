@@ -10,6 +10,7 @@
   --color--gray-100: oklch(92% 0% 68deg);
   --color--gray-500: oklch(65% 2% 286deg);
   --color--gray-900: oklch(24% 0% 68deg);
+  --color--gray-900-transparent: oklch(24% 0% 68deg / 95%);
 
   --color--green-100: #dcecdc;
   --color--green-500: #b8d5b8;
@@ -35,7 +36,7 @@
   --color-body-background: light-dark(white, oklch(0% 0% 0deg / 10%));
 
   --color--background-base: var(--color--white-500);
-  --color--background-light: var(--color--gray-100);
+  --color--background-light: light-dark(var(--color--gray-100), var(--color--gray-500));
   --color--background-x-light: var(--color--gray-50);
   --color--background-dark: var(--color--primary-base);
 
