@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Popcorn from '@lucide/astro/icons/popcorn';
 import {consumptionData} from "../lib/loader/popcorn";
+import ConsumptionTable from "../components/ConsumptionTable.astro";
 ---
 
 <Layout title="Popcorn">
@@ -25,34 +26,7 @@ import {consumptionData} from "../lib/loader/popcorn";
       <details>
         <summary>Popcorn consumption</summary>
 
-        {JSON.stringify(consumptionData)}
-
-        <div class="table-outer-wrapper">
-          <div class="table-inner-wrapper">
-            <table class="table--striped">
-              <caption>Data</caption>
-              <thead>
-              <tr>
-                <th>Category</th>
-                <th>Planned</th>
-                <th>Actual</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Rent/Mortgage</td>
-                <td>$1,200</td>
-                <td>$1,200</td>
-              </tr>
-              <tr>
-                <td>Utilities</td>
-                <td>$150</td>
-                <td>$140</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <ConsumptionTable consumptionData={consumptionData}/>
       </details>
 
       <details>

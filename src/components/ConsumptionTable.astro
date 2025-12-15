@@ -1,0 +1,38 @@
+---
+import type {PopcornConsumption} from "../lib/loader/popcorn.ts";
+
+interface Props {
+  consumptionData: PopcornConsumption[];
+}
+
+const {consumptionData} = Astro.props;
+---
+
+<div class="table-outer-wrapper">
+  <div class="table-inner-wrapper">
+    <table class="table--striped">
+      <caption>Data</caption>
+
+      <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Year</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      {consumptionData.map((dataset) => (
+        <tr>
+          <td>{dataset.type}</td>
+          <td>{dataset.consumptionAmount}</td>
+          <td>{dataset.year}</td>
+        </tr>
+      ))}
+
+      </tbody>
+
+    </table>
+  </div>
+</div>

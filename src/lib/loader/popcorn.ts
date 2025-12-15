@@ -1,7 +1,7 @@
 import {range} from "../utility/range";
 
-type PopcornConsumption = {
-  name: string;
+export type PopcornConsumption = {
+  type: "sweet" | "salty";
   consumptionAmount: number;
   year: number;
 };
@@ -10,17 +10,17 @@ function generatePopcornConsumption(): PopcornConsumption[] {
   const data: PopcornConsumption[] = [];
 
   for (const year of range(2012, 2025)) {
-    const sweet = Math.random() * 100;
-    const salty = Math.random() * 100;
+    const sweet = Math.floor(Math.random() * 1000);
+    const salty = Math.floor(Math.random() * 1000);
 
     data.push({
-      name: "Popcorn",
+      type: "sweet",
       consumptionAmount: sweet,
       year: year,
     });
 
     data.push({
-      name: "Popcorn",
+      type: "salty",
       consumptionAmount: salty,
       year: year,
     });
