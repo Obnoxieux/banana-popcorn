@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Popcorn from '@lucide/astro/icons/popcorn';
+import {consumptionData} from "../lib/loader/popcorn";
+---
+
+<Layout title="Popcorn">
+  <h1>Popcorn</h1>
+
+  <div class="popcorn-page">
+    <section class="popcorn-header-section">
+      <p>
+        Popcorn is the most tasty food in the world, according to the popcorn
+        manufacturing industry. Just look at that:
+      </p>
+
+      <div class="centered-image-container">
+        <Popcorn size={100}/>
+      </div>
+    </section>
+
+    <section>
+      <h2>Infographs</h2>
+
+      <details>
+        <summary>Popcorn consumption</summary>
+
+        {JSON.stringify(consumptionData)}
+
+        <div class="table-outer-wrapper">
+          <div class="table-inner-wrapper">
+            <table class="table--striped">
+              <caption>Data</caption>
+              <thead>
+              <tr>
+                <th>Category</th>
+                <th>Planned</th>
+                <th>Actual</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Rent/Mortgage</td>
+                <td>$1,200</td>
+                <td>$1,200</td>
+              </tr>
+              <tr>
+                <td>Utilities</td>
+                <td>$150</td>
+                <td>$140</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Sweet vs Salty</summary>
+        CONTENT
+      </details>
+
+      <details>
+        <summary>Advantages of sweet popcorn</summary>
+      </details>
+    </section>
+  </div>
+</Layout>
