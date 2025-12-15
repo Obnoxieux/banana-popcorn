@@ -1,0 +1,40 @@
+---
+---
+
+<p>Isn't this very convincing?</p>
+<div>
+  <canvas id="sweet-salty-chart"></canvas>
+</div>
+
+<script>
+  import {Chart, type ChartItem} from "chart.js/auto";
+
+  const canvas = document.getElementById("sweet-salty-chart");
+
+  if (canvas) {
+    new Chart(canvas as ChartItem, {
+      type: 'pie',
+      data: {
+        labels: ['sweet', 'salty', 'both', 'neither',],
+        datasets: [{
+          label: 'Popcorn preferences in Germany',
+          data: [46, 15, 12, 26,],
+          backgroundColor: [
+            'rgb(255, 141, 40)',
+            'rgb(255, 45, 85)',
+            'rgb(97, 85, 245)',
+            'rgb(48, 209, 88)',
+          ],
+          hoverOffset: 4,
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+</script>

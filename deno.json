@@ -1,0 +1,6 @@
+{
+  "allowScripts": {
+    "allow": ["npm:esbuild@0.25.12", "npm:sharp@0.34.5"],
+    "deny": ["npm:fsevents@2.3.3"]
+  }
+}

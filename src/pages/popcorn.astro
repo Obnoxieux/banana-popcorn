@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Popcorn from '@lucide/astro/icons/popcorn';
 import {consumptionData} from "../lib/loader/popcorn";
 import ConsumptionTable from "../components/ConsumptionTable.astro";
+import SweetVsSaltyChart from "../components/SweetVsSaltyChart.astro";
 ---
 
 <Layout title="Popcorn">
@@ -20,6 +21,8 @@ import ConsumptionTable from "../components/ConsumptionTable.astro";
       </div>
     </section>
 
+    <noscript>Charts don't work without JavaScript.</noscript>
+
     <section>
       <h2>Infographs</h2>
 
@@ -31,7 +34,8 @@ import ConsumptionTable from "../components/ConsumptionTable.astro";
 
       <details>
         <summary>Sweet vs Salty</summary>
-        CONTENT
+
+        <SweetVsSaltyChart/>
       </details>
 
       <details>
