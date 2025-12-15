@@ -338,3 +338,4 @@ dist
 .idea
 _cache
 _site
+/.astro/
