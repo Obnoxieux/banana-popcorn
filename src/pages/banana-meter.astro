@@ -3,18 +3,16 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Banana Meter">
-  <h1>Banana Meter</h1>
+  <h1 class="banana-heading">Banana Meter</h1>
   <section>
     <header>
-      <h2>
+      <h2 class="h3">
         Count:
-        <span class="banana-count"></span>
+        <strong class="banana-count"></strong>
       </h2>
     </header>
 
-    <ul class="banana-grid">
-
-    </ul>
+    <ul class="banana-grid"></ul>
   </section>
 </Layout>
 
@@ -30,22 +28,65 @@ import Layout from "../layouts/Layout.astro";
 
   const section = document.querySelector('.banana-grid');
   const fragment = new DocumentFragment();
+  let yearCounter = 1;
+
   if (section) {
-    for (const _ of amount) {
+    for (const number of amount) {
       const li = document.createElement("li");
-      li.innerText = "🍌";
+
+      if (number === 1 || (number - 1) % 12 === 0) {
+        const yearSpan = document.createElement("span");
+        yearSpan.innerText = String(yearCounter);
+        yearSpan.classList.add("year-start");
+        li.appendChild(yearSpan);
+        yearCounter++;
+      }
+
       li.classList.add("banana-grid-item");
+      const span = document.createElement("span");
+      span.innerText = "🍌";
+      li.appendChild(span);
+
       fragment.appendChild(li);
     }
     section.append(fragment);
   }
 </script>
 
-<style>
+<style is:global>
   .banana-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: var(--space--medium) 5px;
+    gap: var(--space--x-large) 0;
     font-size: var(--font-size--subheader);
+    margin-block-start: var(--space--x-large);
+    place-content: stretch;
+
+    .banana-grid-item {
+      position: relative;
+      border: var(--border--light);
+      display: flex;
+      justify-content: center;
+      padding: 1px;
+
+      .year-start {
+        position: absolute;
+        top: -28px;
+        font-size: var(--font-size--small);
+        font-family: monospace;
+        background-color: var(--color--accent-base);
+        border-radius: var(--border-radius--large);
+        padding: 0 6px;
+      }
+    }
+  }
+
+  .banana-heading {
+    &::after {
+      content: "";
+      display: block;
+      width: 25%;
+      border-bottom: var(--border--light);
+    }
   }
 </style>
