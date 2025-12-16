@@ -1,0 +1,17 @@
+{
+  "short_name": "Banana",
+  "name": "Banana Popcorn",
+  "description": "Web App about bananas and popcorn.",
+  "start_url": "/",
+  "display": "standalone",
+  "prefer_related_applications": false,
+  "theme_color": "#ff2b54",
+  "icons": [
+    {
+      "src": "/public/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
