@@ -1,8 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import {getSecret} from "astro:env/server";
+
+const contactEmail = getSecret("PUBLIC_CONTACT_EMAIL_ADDRESS");
+const contactPhone = getSecret("PUBLIC_CONTACT_PHONE");
+const contactAddress = getSecret("PUBLIC_CONTACT_ADDRESS");
 ---
 
 <Layout title="Legal Notice">
-  <h1>Legal Notice</h1>
-  <p>Legal Text</p>
+  <h1>Impressum</h1>
+  <h2>Angaben gem&auml;&szlig; &sect; 5 TMG</h2>
+  <p>David Battefeld<br/>
+    {contactAddress}</p>
+  <h2>Kontakt</h2>
+  <p>Telefon: {contactPhone}<br/>
+    E-Mail: <a class="anchor" href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
+  <p>Quelle: <a class="anchor" href="https://www.e-recht24.de">https://www.e-recht24.de</a></p>
 </Layout>
