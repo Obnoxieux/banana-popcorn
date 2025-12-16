@@ -1,6 +1,12 @@
 .main-footer {
   padding-top: var(--space--large);
 
+  padding-bottom: 6rem;
+
+  @media (min-width: 48rem) {
+    padding-bottom: 2.5rem;
+  }
+
   .footer-nav {
     .footer-links {
       display: flex;
