@@ -1,0 +1,15 @@
+services:
+  site:
+    image: obnoxieux/banana-popcorn:latest
+    restart: unless-stopped
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.banana.rule=Host(`banana.obnx.dev`)"
+      - "traefik.http.routers.banana.entrypoints=websecure"
+      - "traefik.http.routers.banana.tls.certresolver=letsEncrypt"
+
+networks:
+  proxy:
+    external: true
