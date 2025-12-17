@@ -9,6 +9,7 @@ services:
       - "traefik.http.routers.banana.rule=Host(`banana.obnx.dev`)"
       - "traefik.http.routers.banana.entrypoints=websecure"
       - "traefik.http.routers.banana.tls.certresolver=letsEncrypt"
+      - "traefik.docker.network=proxy"
 
 networks:
   proxy:
