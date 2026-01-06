@@ -2,37 +2,43 @@
 import HeaderNav from "../components/HeaderNav.astro";
 import Footer from "../components/Footer.astro";
 import BottomNav from "../components/BottomNav.astro";
-import '../css/app.css';
+import "../css/app.css";
 
 export interface Props {
   title?: string;
 }
 
-const {title} = Astro.props as Props;
+const { title } = Astro.props as Props;
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-  <link href="/manifest.webmanifest" rel="manifest">
-  <title>{title ?? "Banana Popcorn"}</title>
-</head>
-<body>
-<header class="main-nav-header">
-  <HeaderNav/>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="/manifest.webmanifest" rel="manifest" />
+    <title>{title ?? "Banana Popcorn"}</title>
+  </head>
+  <body>
+    <header class="main-nav-header">
+      <HeaderNav />
+    </header>
 
-<main>
-  <div class="container">
-    <hr>
-    <slot/>
-  </div>
-</main>
+    <main>
+      <div class="container">
+        <hr />
+        <slot />
+      </div>
+    </main>
 
-<Footer/>
+    <Footer />
 
-<BottomNav/>
-</body>
+    <BottomNav />
+
+    <script is:inline src="oneko.js"></script>
+  </body>
 </html>
